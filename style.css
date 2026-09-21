@@ -1,0 +1,378 @@
+/* INSTAGRAM */
+
+.instagram-section {
+    padding: 100px 30px;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.instagram-text {
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+.instagram-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.instagram-gallery img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: 0.3s;
+}
+
+.instagram-gallery img:hover {
+    transform: scale(1.04);
+}
+
+.instagram-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #d4af37;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.instagram-button:hover {
+    opacity: 0.8;
+}
+
+
+/* Instagram on phones */
+
+@media (max-width: 768px) {
+
+    .instagram-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .instagram-gallery img {
+        height: 180px;
+    }
+
+}* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: white;
+}
+
+/* NAVIGATION */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.85);
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.logo span,
+footer span,
+.hero span {
+    color: #d4af37;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+}
+
+
+/* HERO */
+
+.hero {
+    height: 100vh;
+
+    background:
+        linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.7)),
+        url("https://images.unsplash.com/photo-1452780212940-6f5c0d14d848?auto=format&fit=crop&w=1800&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content > p:first-child {
+    color: #d4af37;
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 100px);
+    margin: 20px 0;
+    line-height: 1;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #d4af37;
+    color: black;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* SECTIONS */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 30px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    color: #d4af37;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.section-title h2 {
+    font-size: 45px;
+    margin-top: 10px;
+}
+
+
+/* ABOUT */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    display: block;
+}
+
+.about-text h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #bbb;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+/* GALLERY */
+
+.gallery-section {
+    max-width: 1400px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+
+/* SERVICES */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service {
+    padding: 40px 30px;
+    background: #151515;
+    text-align: center;
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.service p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+
+/* CONTACT */
+
+.contact {
+    padding: 100px 30px;
+    max-width: 800px;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 17px;
+    background: #151515;
+    border: 1px solid #333;
+    color: white;
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid #222;
+}
+
+footer p {
+    color: #777;
+    margin-top: 10px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #111;
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .section-title h2 {
+        font-size: 35px;
+    }
+}
